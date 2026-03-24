@@ -8,8 +8,8 @@ public class Controller {
 	
 	@GetMapping("ce1")
 	public String getDate() {
-		System.out.println("요청 및 응답(수정 후11ㅁㄴㅇㅁㅇㅁㄴㅇㅁ1) -----------");
-		return "응답 데이ㅁㄴㅇㅁㄴㅇ터";
+		System.out.println("수정 후!");
+		return "응답 데이터";
 	}
 
 }
