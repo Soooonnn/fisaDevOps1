@@ -9,7 +9,7 @@ public class Controller {
 	@GetMapping("ce1")
 	public String getDate() {
 		System.out.println("수정 후!");
-		return "응답 데이터";
+		return "응답 데이터 수정 후!!";
 	}
 
 }
