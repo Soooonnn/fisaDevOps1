@@ -8,7 +8,7 @@ public class Controller {
 	
 	@GetMapping("ce1")
 	public String getDate() {
-		System.out.println("요청 및 응답 -----------");
+		System.out.println("요청 및 응답(수정 전) -----------");
 		return "응답 데이터";
 	}
 
