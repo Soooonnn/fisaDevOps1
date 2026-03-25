@@ -102,6 +102,28 @@ docker run --name myjenkins2 \
 > Jenkins Pipeline에서 JAR 파일을 `/var/jenkins_home/appjar/`로 복사하면,  
 > 볼륨 마운트를 통해 Ubuntu 호스트의 `appjardir/` 폴더에 **실시간으로 반영**됨.
 
+
+### Step 2-1. Jenkins 초기 잠금 해제
+컨테이너 실행 후 http://localhost:8090 접속하면 초기 비밀번호 입력 화면이 나옴.
+
+``` bash
+# 초기 관리자 비밀번호 확인
+docker logs myjenkins2
+```
+
+로그 중간에 아래와 같은 형태로 표시됨.
+``` bash
+*************************************************************
+Jenkins initial setup is required.
+Please use the following password to proceed to installation:
+
+  af3b5f0b2b4e4c1e9b1234567890abcd   ← 이 값을 복사해서 입력
+
+*************************************************************
+```
+
+이후 "Install suggested plugins" 선택 → 관리자 계정 생성 순으로 진행하면 됨.
+
 ---
 
 ### Step 3. GitHub ↔ Jenkins Webhook 연동
